@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="WSLViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Key Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fMk-Ji-QiB">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="262" id="2gw-h0-xAZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="pW7-PG-PNt"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Value" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iu0-hB-V8o">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="ezg-Pe-qZb"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Iu0-hB-V8o" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="3Ag-EI-oyS"/>
+                            <constraint firstItem="Iu0-hB-V8o" firstAttribute="top" secondItem="3" secondAttribute="top" constant="191" id="ZD7-ey-ryf"/>
+                            <constraint firstItem="fMk-Ji-QiB" firstAttribute="top" secondItem="3" secondAttribute="top" constant="99" id="bO5-iZ-MvL"/>
+                            <constraint firstAttribute="trailing" secondItem="fMk-Ji-QiB" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="juK-eE-OO2"/>
+                            <constraint firstItem="Iu0-hB-V8o" firstAttribute="leading" secondItem="fMk-Ji-QiB" secondAttribute="leading" type="default" id="x3x-Jz-gBh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="keyNameTextField" destination="fMk-Ji-QiB" id="W0p-OZ-8ib"/>
+                        <outlet property="valueTextField" destination="Iu0-hB-V8o" id="gc6-Gn-Y5z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="WSLViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WSLViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="keyNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="valueTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

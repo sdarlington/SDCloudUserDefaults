@@ -10,7 +10,29 @@
 		C480294D169093EF0061EFF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C480294C169093EF0061EFF8 /* Foundation.framework */; };
 		C4802952169093EF0061EFF8 /* SDCloudUserDefaults.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4802951169093EF0061EFF8 /* SDCloudUserDefaults.h */; };
 		C4802954169093EF0061EFF8 /* SDCloudUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = C4802953169093EF0061EFF8 /* SDCloudUserDefaults.m */; };
+		C480297C16909FFF0061EFF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C480297B16909FFF0061EFF8 /* UIKit.framework */; };
+		C480297D16909FFF0061EFF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C480294C169093EF0061EFF8 /* Foundation.framework */; };
+		C480297F16909FFF0061EFF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C480297E16909FFF0061EFF8 /* CoreGraphics.framework */; };
+		C480298516909FFF0061EFF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C480298316909FFF0061EFF8 /* InfoPlist.strings */; };
+		C480298716909FFF0061EFF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C480298616909FFF0061EFF8 /* main.m */; };
+		C480298B16909FFF0061EFF8 /* WSLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C480298A16909FFF0061EFF8 /* WSLAppDelegate.m */; };
+		C480298D16909FFF0061EFF8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C480298C16909FFF0061EFF8 /* Default.png */; };
+		C480298F16909FFF0061EFF8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C480298E16909FFF0061EFF8 /* Default@2x.png */; };
+		C480299116909FFF0061EFF8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C480299016909FFF0061EFF8 /* Default-568h@2x.png */; };
+		C480299416909FFF0061EFF8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C480299216909FFF0061EFF8 /* MainStoryboard.storyboard */; };
+		C480299716909FFF0061EFF8 /* WSLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C480299616909FFF0061EFF8 /* WSLViewController.m */; };
+		C480299E1690A0100061EFF8 /* libSDCloudUserDefaults.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4802949169093EF0061EFF8 /* libSDCloudUserDefaults.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C480299C1690A0090061EFF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4802940169093EF0061EFF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4802948169093EF0061EFF8;
+			remoteInfo = SDCloudUserDefaults;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C4802947169093EF0061EFF8 /* CopyFiles */ = {
@@ -31,6 +53,21 @@
 		C4802950169093EF0061EFF8 /* SDCloudUserDefaults-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDCloudUserDefaults-Prefix.pch"; sourceTree = "<group>"; };
 		C4802951169093EF0061EFF8 /* SDCloudUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDCloudUserDefaults.h; sourceTree = "<group>"; };
 		C4802953169093EF0061EFF8 /* SDCloudUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDCloudUserDefaults.m; sourceTree = "<group>"; };
+		C480297916909FFF0061EFF8 /* TestSDCloudUserDefaults.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestSDCloudUserDefaults.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C480297B16909FFF0061EFF8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C480297E16909FFF0061EFF8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C480298216909FFF0061EFF8 /* TestSDCloudUserDefaults-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestSDCloudUserDefaults-Info.plist"; sourceTree = "<group>"; };
+		C480298416909FFF0061EFF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C480298616909FFF0061EFF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C480298816909FFF0061EFF8 /* TestSDCloudUserDefaults-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestSDCloudUserDefaults-Prefix.pch"; sourceTree = "<group>"; };
+		C480298916909FFF0061EFF8 /* WSLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSLAppDelegate.h; sourceTree = "<group>"; };
+		C480298A16909FFF0061EFF8 /* WSLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSLAppDelegate.m; sourceTree = "<group>"; };
+		C480298C16909FFF0061EFF8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C480298E16909FFF0061EFF8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C480299016909FFF0061EFF8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C480299316909FFF0061EFF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		C480299516909FFF0061EFF8 /* WSLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSLViewController.h; sourceTree = "<group>"; };
+		C480299616909FFF0061EFF8 /* WSLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSLViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +79,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C480297616909FFF0061EFF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C480299E1690A0100061EFF8 /* libSDCloudUserDefaults.a in Frameworks */,
+				C480297C16909FFF0061EFF8 /* UIKit.framework in Frameworks */,
+				C480297D16909FFF0061EFF8 /* Foundation.framework in Frameworks */,
+				C480297F16909FFF0061EFF8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -49,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				C480294E169093EF0061EFF8 /* SDCloudUserDefaults */,
+				C480298016909FFF0061EFF8 /* TestSDCloudUserDefaults */,
 				C480294B169093EF0061EFF8 /* Frameworks */,
 				C480294A169093EF0061EFF8 /* Products */,
 			);
@@ -58,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				C4802949169093EF0061EFF8 /* libSDCloudUserDefaults.a */,
+				C480297916909FFF0061EFF8 /* TestSDCloudUserDefaults.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				C480294C169093EF0061EFF8 /* Foundation.framework */,
+				C480297B16909FFF0061EFF8 /* UIKit.framework */,
+				C480297E16909FFF0061EFF8 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -84,6 +136,33 @@
 			isa = PBXGroup;
 			children = (
 				C4802950169093EF0061EFF8 /* SDCloudUserDefaults-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C480298016909FFF0061EFF8 /* TestSDCloudUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				C480298916909FFF0061EFF8 /* WSLAppDelegate.h */,
+				C480298A16909FFF0061EFF8 /* WSLAppDelegate.m */,
+				C480299216909FFF0061EFF8 /* MainStoryboard.storyboard */,
+				C480299516909FFF0061EFF8 /* WSLViewController.h */,
+				C480299616909FFF0061EFF8 /* WSLViewController.m */,
+				C480298116909FFF0061EFF8 /* Supporting Files */,
+			);
+			path = TestSDCloudUserDefaults;
+			sourceTree = "<group>";
+		};
+		C480298116909FFF0061EFF8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C480298216909FFF0061EFF8 /* TestSDCloudUserDefaults-Info.plist */,
+				C480298316909FFF0061EFF8 /* InfoPlist.strings */,
+				C480298616909FFF0061EFF8 /* main.m */,
+				C480298816909FFF0061EFF8 /* TestSDCloudUserDefaults-Prefix.pch */,
+				C480298C16909FFF0061EFF8 /* Default.png */,
+				C480298E16909FFF0061EFF8 /* Default@2x.png */,
+				C480299016909FFF0061EFF8 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -108,6 +187,24 @@
 			productReference = C4802949169093EF0061EFF8 /* libSDCloudUserDefaults.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		C480297816909FFF0061EFF8 /* TestSDCloudUserDefaults */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C480299A16909FFF0061EFF8 /* Build configuration list for PBXNativeTarget "TestSDCloudUserDefaults" */;
+			buildPhases = (
+				C480297516909FFF0061EFF8 /* Sources */,
+				C480297616909FFF0061EFF8 /* Frameworks */,
+				C480297716909FFF0061EFF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C480299D1690A0090061EFF8 /* PBXTargetDependency */,
+			);
+			name = TestSDCloudUserDefaults;
+			productName = TestSDCloudUserDefaults;
+			productReference = C480297916909FFF0061EFF8 /* TestSDCloudUserDefaults.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -130,9 +227,25 @@
 			projectRoot = "";
 			targets = (
 				C4802948169093EF0061EFF8 /* SDCloudUserDefaults */,
+				C480297816909FFF0061EFF8 /* TestSDCloudUserDefaults */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C480297716909FFF0061EFF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C480298516909FFF0061EFF8 /* InfoPlist.strings in Resources */,
+				C480298D16909FFF0061EFF8 /* Default.png in Resources */,
+				C480298F16909FFF0061EFF8 /* Default@2x.png in Resources */,
+				C480299116909FFF0061EFF8 /* Default-568h@2x.png in Resources */,
+				C480299416909FFF0061EFF8 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C4802945169093EF0061EFF8 /* Sources */ = {
@@ -143,7 +256,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C480297516909FFF0061EFF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C480298716909FFF0061EFF8 /* main.m in Sources */,
+				C480298B16909FFF0061EFF8 /* WSLAppDelegate.m in Sources */,
+				C480299716909FFF0061EFF8 /* WSLViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C480299D1690A0090061EFF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4802948169093EF0061EFF8 /* SDCloudUserDefaults */;
+			targetProxy = C480299C1690A0090061EFF8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C480298316909FFF0061EFF8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C480298416909FFF0061EFF8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C480299216909FFF0061EFF8 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C480299316909FFF0061EFF8 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C4802955169093EF0061EFF8 /* Debug */ = {
@@ -217,6 +367,31 @@
 			};
 			name = Release;
 		};
+		C480299816909FFF0061EFF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestSDCloudUserDefaults/TestSDCloudUserDefaults-Prefix.pch";
+				INFOPLIST_FILE = "TestSDCloudUserDefaults/TestSDCloudUserDefaults-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C480299916909FFF0061EFF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestSDCloudUserDefaults/TestSDCloudUserDefaults-Prefix.pch";
+				INFOPLIST_FILE = "TestSDCloudUserDefaults/TestSDCloudUserDefaults-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -234,6 +409,15 @@
 			buildConfigurations = (
 				C4802958169093EF0061EFF8 /* Debug */,
 				C4802959169093EF0061EFF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C480299A16909FFF0061EFF8 /* Build configuration list for PBXNativeTarget "TestSDCloudUserDefaults" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C480299816909FFF0061EFF8 /* Debug */,
+				C480299916909FFF0061EFF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

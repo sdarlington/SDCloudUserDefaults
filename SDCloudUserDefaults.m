@@ -27,6 +27,10 @@
     return retv;
 }
 
++(NSInteger)integerForKey:(NSString*)aKey {
+    return [[SDCloudUserDefaults objectForKey:aKey] integerValue];
+}
+
 +(void)setString:(NSString*)aString forKey:(NSString*)aKey {
     [SDCloudUserDefaults setObject:aString forKey:aKey];
 }
@@ -38,6 +42,11 @@
 +(void)setObject:(id)anObject forKey:(NSString*)aKey {
     [[NSUbiquitousKeyValueStore defaultStore] setObject:anObject forKey:aKey];
     [[NSUserDefaults standardUserDefaults] setObject:anObject forKey:aKey];
+}
+
++(void)setInteger:(NSInteger)anInteger forKey:(NSString*)aKey {
+    [SDCloudUserDefaults setObject:[NSNumber numberWithInteger:anInteger]
+                            forKey:aKey];
 }
 
 +(void)removeObjectForKey:(NSString*)aKey {

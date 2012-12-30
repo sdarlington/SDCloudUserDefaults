@@ -3,9 +3,16 @@ README: SDCloudUserDefaults
 
 The documentation for NSUbiquitousKeyValueStore says:
 
-"Rather than use the key-value store as the sole source of your data, you should instead use it as a mechanism for updating a locally stored set of configuration values."
+> Rather than use the key-value store as the sole source of your data, you should instead
+> use it as a mechanism for updating a locally stored set of configuration values.
 
-That's what SDCloudUserDefaults does. Use it instead of NSUserDefaults for anything you want mirrored in iCloud. Best to also register for notifications when the app launches or you might lose updates.
+That's what SDCloudUserDefaults does. Use it instead of NSUserDefaults for anything you
+want mirrored in iCloud. Best to also register for notifications when the app launches or
+you might lose updates.
+
+To use it you can either copy SDCloudUserDefaults .[hm] into your project or just drag the
+SDCloudUserDefaults project into your project and add libSDUserCloudDefaults.a in the
+"Link binary with Libraries" section of the "Build Phases" tab in Xcode.
 
 Licence
 -------

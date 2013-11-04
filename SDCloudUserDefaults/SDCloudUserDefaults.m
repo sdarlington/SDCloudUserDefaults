@@ -66,9 +66,9 @@
                                                   usingBlock:^(NSNotification* notification) {
                                                       NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
                                                       NSUbiquitousKeyValueStore* cloud = [NSUbiquitousKeyValueStore defaultStore];
-                                                      NSDictionary* changedKeys = [notification.userInfo objectForKey:@"NSUbiquitousKeyValueStoreChangedKeysKey"];
-                                                      for (NSString* a in changedKeys) {
-                                                          [defaults setObject:[cloud objectForKey:a] forKey:a];
+                                                      NSArray* changedKeys = [notification.userInfo objectForKey:NSUbiquitousKeyValueStoreChangedKeysKey];
+                                                      for (NSString* key in changedKeys) {
+                                                          [defaults setObject:[cloud objectForKey:key] forKey:key];
                                                       }
                                                   }];
 

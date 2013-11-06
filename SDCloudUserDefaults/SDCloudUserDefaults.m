@@ -9,6 +9,8 @@
 
 @implementation SDCloudUserDefaults
 
+static id notificationObserver;
+
 +(NSString*)stringForKey:(NSString*)aKey {
     return [SDCloudUserDefaults objectForKey:aKey];
 }
@@ -60,35 +62,44 @@
 }
 
 +(void)registerForNotifications {
-    [[NSNotificationCenter defaultCenter] addObserverForName:@"NSUbiquitousKeyValueStoreDidChangeExternallyNotification"
-                                                      object:[NSUbiquitousKeyValueStore defaultStore]
-                                                       queue:nil
-                                                  usingBlock:^(NSNotification* notification) {
-                                                      
-                                                      NSDictionary* userInfo = [notification userInfo];
-                                                      NSNumber* reasonForChange = [userInfo objectForKey:NSUbiquitousKeyValueStoreChangeReasonKey];
-                                                      
-                                                      // If a reason could not be determined, do not update anything.
-                                                      if (!reasonForChange)
-                                                      return;
-                                                      
-                                                      // Update only for changes from the server.
-                                                      NSInteger reason = [reasonForChange integerValue];
-                                                      if ((reason == NSUbiquitousKeyValueStoreServerChange) ||
-                                                          (reason == NSUbiquitousKeyValueStoreInitialSyncChange)) {
-                                                          NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-                                                          NSUbiquitousKeyValueStore* cloud = [NSUbiquitousKeyValueStore defaultStore];
-                                                          NSArray* changedKeys = [userInfo objectForKey:NSUbiquitousKeyValueStoreChangedKeysKey];
-                                                          for (NSString* key in changedKeys) {
-                                                              [defaults setObject:[cloud objectForKey:key] forKey:key];
-                                                          }
-                                                      }
-                                                  }];
+    @synchronized(notificationObserver) {
+        if (notificationObserver) {
+            return;
+        }
+
+        notificationObserver = [[NSNotificationCenter defaultCenter] addObserverForName:@"NSUbiquitousKeyValueStoreDidChangeExternallyNotification"
+                                                                                 object:[NSUbiquitousKeyValueStore defaultStore]
+                                                                                  queue:nil
+                                                                             usingBlock:^(NSNotification* notification) {
+                                                                                 
+                                                                                 NSDictionary* userInfo = [notification userInfo];
+                                                                                 NSNumber* reasonForChange = [userInfo objectForKey:NSUbiquitousKeyValueStoreChangeReasonKey];
+                                                                                 
+                                                                                 // If a reason could not be determined, do not update anything.
+                                                                                 if (!reasonForChange)
+                                                                                     return;
+                                                                                 
+                                                                                 // Update only for changes from the server.
+                                                                                 NSInteger reason = [reasonForChange integerValue];
+                                                                                 if ((reason == NSUbiquitousKeyValueStoreServerChange) ||
+                                                                                     (reason == NSUbiquitousKeyValueStoreInitialSyncChange)) {
+                                                                                     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+                                                                                     NSUbiquitousKeyValueStore* cloud = [NSUbiquitousKeyValueStore defaultStore];
+                                                                                     NSArray* changedKeys = [userInfo objectForKey:NSUbiquitousKeyValueStoreChangedKeysKey];
+                                                                                     for (NSString* key in changedKeys) {
+                                                                                         [defaults setObject:[cloud objectForKey:key] forKey:key];
+                                                                                     }
+                                                                                 }
+                                                                             }];
+    }
     
 }
 
 +(void)removeNotifications {
-    [[NSNotificationCenter defaultCenter] removeObserver:[NSUbiquitousKeyValueStore defaultStore]];
+    @synchronized(notificationObserver) {
+        [[NSNotificationCenter defaultCenter] removeObserver:notificationObserver];
+        notificationObserver = nil;
+    }
 }
 
 @end

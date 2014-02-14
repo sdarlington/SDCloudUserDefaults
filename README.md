@@ -1,5 +1,6 @@
-README: SDCloudUserDefaults
----------------------------
+# SDCloudUserDefaults
+
+**Store NSUserDefaults and iCloud data at the same time.**
 
 The documentation for NSUbiquitousKeyValueStore says:
 
@@ -10,15 +11,68 @@ That's what SDCloudUserDefaults does. Use it instead of NSUserDefaults for anyth
 want mirrored in iCloud. Best to also register for notifications when the app launches or
 you might lose updates.
 
-To use it you can either copy SDCloudUserDefaults .[hm] into your project or just drag the
-SDCloudUserDefaults project into your project and add libSDUserCloudDefaults.a in the
-"Link binary with Libraries" section of the "Build Phases" tab in Xcode.
+# Adding to your project
 
-Licence
+There are three ways of adding `SDCloudUserDefaults` to your project:
+
+* [CocoaPods](http://cocoapods.org)
+* Adding the library to your project as a dependency
+* Drag-and-drop a few files manually
+
+## CocoaPods
+
+Add the following line to your Podfile:
+
+```ruby
+pod 'SDCloudUserDefaults'
+```
+
+There is no step two.
+
+## Library as a dependency
+
+If you're using iOS 5 or above and are happy with ARC, it's as simple as:
+
+1. Drag the SDCloudUserDefaults.xcodeproj file to your project
+2. Switch to the "Build Phases" project section
+3. Add SDCloudUserDefaults to "Target Dependencies"
+4. Add libSDCloudUserDefaults.a to "Link Binary With Libraries"
+
+## Adding files manually
+
+Copy SDCloudUserDefaults .h and SDCloudUserDefaults.m into your project.
+
+# Usage
+
+Unlike `NSUserDefaults` or the iCloud equivalents, all of `SDUserDefaults`
+are class methods, so there's no need to get the `standardUserDefaults`
+(I'm a lazy and bad typist).
+
+Most of the methods are pretty obvious. For example
+
+```objective-c
++(NSString*)stringForKey:(NSString*)aKey;
++(void)setString:(NSString*)aString forKey:(NSString*)aKey;
++(void)removeObjectForKey:(NSString*)aKey;
+```
+
+There are similar methods for a few of the other data types (bool, object,
+integer). As with `NSUserDefaults` there is also a `synchronize` to make sure
+your changes are committed -- locally at least, it's not possible to guarantee
+that iCloud has seen them.
+
+If you want to import changes from iCloud (and you probably do), you need to
+call this method somewhere near the start of your app:
+
+```objective-c
++(void)registerForNotifications;
+```
+
+# Licence
 -------
 
     /*
-     * Copyright 2011 Wandle Software Limited
+     * Copyright 2011-2014 Wandle Software Limited
      *
      * Licensed under the Apache License, Version 2.0 (the "License");
      * you may not use this file except in compliance with the License.

@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/sdarlington/SDCloudUserDefaults"
-  s.license      = { :type => 'Apache License 2.0', :file => 'http://www.apache.org/licenses/LICENSE-2.0' }
+  s.license      = { :type => 'Apache License 2.0', :file => 'LICENSE' }
   s.author             = "Stephen Darlington"
   s.social_media_url = "http://twitter.com/sdarlington"
   s.platform     = :ios, '6.0'

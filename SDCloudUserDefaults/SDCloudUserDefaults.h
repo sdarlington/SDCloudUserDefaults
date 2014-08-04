@@ -9,6 +9,9 @@
 
 @interface SDCloudUserDefaults : NSObject
 
++(void)setSuiteName:(NSString *)suiteName;
++(NSString*)suiteName;
+
 +(NSString*)stringForKey:(NSString*)aKey;
 +(BOOL)boolForKey:(NSString*)aKey;
 +(id)objectForKey:(NSString*)aKey;

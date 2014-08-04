@@ -26,6 +26,12 @@ static NSUserDefaults *userDefaults;
         userDefaults = nil;
     } else {
         userDefaults = [[NSUserDefaults alloc] initWithSuiteName:suiteName];
+        NSDictionary *dictionary = [[NSUbiquitousKeyValueStore defaultStore] dictionaryRepresentation];
+        for (NSString *key in [dictionary allKeys]) {
+            if ([userDefaults objectForKey:key] == nil) {
+                [userDefaults setObject:dictionary[key] forKey:key];
+            }
+        }
     }
 }
 

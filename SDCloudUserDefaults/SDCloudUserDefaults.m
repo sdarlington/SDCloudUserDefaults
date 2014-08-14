@@ -10,6 +10,34 @@
 @implementation SDCloudUserDefaults
 
 static id notificationObserver;
+static NSString *suiteName;
+static NSUserDefaults *userDefaults;
+
++(NSUserDefaults *) _standardUserDefaults {
+    if (userDefaults == nil) {
+        userDefaults = [NSUserDefaults standardUserDefaults];
+    }
+    return userDefaults;
+}
+
++(void)setSuiteName:(NSString *)aSuiteName {
+    suiteName = aSuiteName;
+    if (suiteName == nil) {
+        userDefaults = nil;
+    } else {
+        userDefaults = [[NSUserDefaults alloc] initWithSuiteName:suiteName];
+        NSDictionary *dictionary = [[NSUbiquitousKeyValueStore defaultStore] dictionaryRepresentation];
+        for (NSString *key in [dictionary allKeys]) {
+            if ([userDefaults objectForKey:key] == nil) {
+                [userDefaults setObject:dictionary[key] forKey:key];
+            }
+        }
+    }
+}
+
++(NSString*)suiteName {
+    return suiteName;
+}
 
 +(NSString*)stringForKey:(NSString*)aKey {
     return [SDCloudUserDefaults objectForKey:aKey];
@@ -23,7 +51,7 @@ static id notificationObserver;
     NSUbiquitousKeyValueStore* cloud = [NSUbiquitousKeyValueStore defaultStore];
     id retv = [cloud objectForKey:aKey];
     if (!retv) {
-        retv = [[NSUserDefaults standardUserDefaults] objectForKey:aKey];
+        retv = [[self _standardUserDefaults] objectForKey:aKey];
         [cloud setObject:retv forKey:aKey];
     }
     return retv;
@@ -43,7 +71,7 @@ static id notificationObserver;
 
 +(void)setObject:(id)anObject forKey:(NSString*)aKey {
     [[NSUbiquitousKeyValueStore defaultStore] setObject:anObject forKey:aKey];
-    [[NSUserDefaults standardUserDefaults] setObject:anObject forKey:aKey];
+    [[self _standardUserDefaults] setObject:anObject forKey:aKey];
 }
 
 +(void)setInteger:(NSInteger)anInteger forKey:(NSString*)aKey {
@@ -53,12 +81,12 @@ static id notificationObserver;
 
 +(void)removeObjectForKey:(NSString*)aKey {
     [[NSUbiquitousKeyValueStore defaultStore] removeObjectForKey:aKey];
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:aKey];
+    [[self _standardUserDefaults] removeObjectForKey:aKey];
 }
 
 +(void)synchronize {
     [[NSUbiquitousKeyValueStore defaultStore] synchronize];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    [[self _standardUserDefaults] synchronize];
 }
 
 +(void)registerForNotifications {
@@ -83,7 +111,7 @@ static id notificationObserver;
                                                                                  NSInteger reason = [reasonForChange integerValue];
                                                                                  if ((reason == NSUbiquitousKeyValueStoreServerChange) ||
                                                                                      (reason == NSUbiquitousKeyValueStoreInitialSyncChange)) {
-                                                                                     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+                                                                                     NSUserDefaults* defaults = [self _standardUserDefaults];
                                                                                      NSUbiquitousKeyValueStore* cloud = [NSUbiquitousKeyValueStore defaultStore];
                                                                                      NSArray* changedKeys = [userInfo objectForKey:NSUbiquitousKeyValueStoreChangedKeysKey];
                                                                                      for (NSString* key in changedKeys) {

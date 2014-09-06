@@ -16,11 +16,13 @@
 +(BOOL)boolForKey:(NSString*)aKey;
 +(id)objectForKey:(NSString*)aKey;
 +(NSInteger)integerForKey:(NSString*)aKey;
++(float)floatForKey:(NSString*)aKey;
 
 +(void)setString:(NSString*)aString forKey:(NSString*)aKey;
 +(void)setBool:(BOOL)aBool forKey:(NSString*)aKey;
 +(void)setObject:(id)anObject forKey:(NSString*)aKey;
 +(void)setInteger:(NSInteger)anInteger forKey:(NSString*)aKey;
++(void)setFloat:(float)aFloat forKey:(NSString*)aKey;
 
 +(void)removeObjectForKey:(NSString*)aKey;
 

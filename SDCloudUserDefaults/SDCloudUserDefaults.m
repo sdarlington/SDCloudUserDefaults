@@ -61,6 +61,10 @@ static NSUserDefaults *userDefaults;
     return [[SDCloudUserDefaults objectForKey:aKey] integerValue];
 }
 
++(float)floatForKey:(NSString *)aKey {
+    return [[SDCloudUserDefaults objectForKey:aKey] floatValue];
+}
+
 +(void)setString:(NSString*)aString forKey:(NSString*)aKey {
     [SDCloudUserDefaults setObject:aString forKey:aKey];
 }
@@ -76,6 +80,11 @@ static NSUserDefaults *userDefaults;
 
 +(void)setInteger:(NSInteger)anInteger forKey:(NSString*)aKey {
     [SDCloudUserDefaults setObject:[NSNumber numberWithInteger:anInteger]
+                            forKey:aKey];
+}
+
++(void)setFloat:(float)aFloat forKey:(NSString *)aKey {
+    [SDCloudUserDefaults setObject:@(aFloat)
                             forKey:aKey];
 }
 

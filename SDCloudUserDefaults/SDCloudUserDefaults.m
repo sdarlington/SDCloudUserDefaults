@@ -21,14 +21,26 @@ static NSUserDefaults *userDefaults;
 }
 
 +(void)setSuiteName:(NSString *)aSuiteName {
+    if (suiteName == aSuiteName) {
+        return;
+    }
+#if __has_feature(objc_arc)
     suiteName = aSuiteName;
-    if (suiteName == nil) {
+#else
+    [suiteName release];
+    suiteName = [aSuiteName copy];
+#endif
+    if (!suiteName) {
+#if !__has_feature(objc_arc)
+        [userDefaults release];
+#endif
         userDefaults = nil;
-    } else {
+    }
+    else {
         userDefaults = [[NSUserDefaults alloc] initWithSuiteName:suiteName];
         NSDictionary *dictionary = [[NSUbiquitousKeyValueStore defaultStore] dictionaryRepresentation];
         for (NSString *key in [dictionary allKeys]) {
-            if ([userDefaults objectForKey:key] == nil) {
+            if (![userDefaults objectForKey:key]) {
                 [userDefaults setObject:dictionary[key] forKey:key];
             }
         }

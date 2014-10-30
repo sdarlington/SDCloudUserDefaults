@@ -134,7 +134,7 @@
  */
 +(void)removeNotifications;
 
-/*
+/**
  *  Notification with the following name will be fired for every updated value that came from iCloud
  */
 extern NSString * const SDCloudValueUpdatedNotification;

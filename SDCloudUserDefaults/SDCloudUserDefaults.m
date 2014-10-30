@@ -9,7 +9,7 @@
 
 @implementation SDCloudUserDefaults
 
-NSString * const SDCloudValueUpdatedNotification = @"com.sdclouduserdefaults.valueupdated";
+NSString * const SDCloudValueUpdatedNotification = @"com.wandlesoftware.SDCloudUserDefaults.KeyValueUpdated";
 
 static id notificationObserver;
 static NSString *suiteName;

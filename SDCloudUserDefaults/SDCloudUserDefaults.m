@@ -9,6 +9,8 @@
 
 @implementation SDCloudUserDefaults
 
+NSString * const SDCloudValueUpdatedNotification = @"com.sdclouduserdefaults.valueupdated";
+
 static id notificationObserver;
 static NSString *suiteName;
 static NSUserDefaults *userDefaults;
@@ -137,7 +139,13 @@ static NSUserDefaults *userDefaults;
                                                                                      NSArray* changedKeys = [userInfo objectForKey:NSUbiquitousKeyValueStoreChangedKeysKey];
                                                                                      for (NSString* key in changedKeys) {
                                                                                          [defaults setObject:[cloud objectForKey:key] forKey:key];
+                                                                                         
+                                                                                         [[NSNotificationCenter defaultCenter] postNotificationName:SDCloudValueUpdatedNotification
+                                                                                                                                             object:self
+                                                                                                                                           userInfo:@{key:[cloud objectForKey:key]}];
                                                                                      }
+                                                                                     
+                                                                                     
                                                                                  }
                                                                              }];
     }

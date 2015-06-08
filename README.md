@@ -11,6 +11,10 @@ That's what SDCloudUserDefaults does. Use it instead of NSUserDefaults for anyth
 want mirrored in iCloud. Best to also register for notifications when the app launches or
 you might lose updates.
 
+Note: By popular request I have enabled OS X support in the CocoaPods configuration. This
+_should_ work but I have not been able to test it. Please let me know if you get it working.
+Patches are welcomed if changes are required.
+
 # Adding to your project
 
 There are three ways of adding `SDCloudUserDefaults` to your project:
@@ -72,7 +76,7 @@ call this method somewhere near the start of your app:
 -------
 
     /*
-     * Copyright 2011-2014 Wandle Software Limited
+     * Copyright 2011-2015 Wandle Software Limited
      *
      * Licensed under the Apache License, Version 2.0 (the "License");
      * you may not use this file except in compliance with the License.

@@ -68,6 +68,9 @@
 		C480299316909FFF0061EFF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C480299516909FFF0061EFF8 /* WSLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSLViewController.h; sourceTree = "<group>"; };
 		C480299616909FFF0061EFF8 /* WSLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSLViewController.m; sourceTree = "<group>"; };
+		C4C65C791B25F20700288498 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C4C65C7A1B25F20700288498 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C4C65C7B1B25F20700288498 /* SDCloudUserDefaults.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SDCloudUserDefaults.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,9 @@
 		C480293E169093EF0061EFF8 = {
 			isa = PBXGroup;
 			children = (
+				C4C65C791B25F20700288498 /* LICENSE */,
+				C4C65C7A1B25F20700288498 /* README.md */,
+				C4C65C7B1B25F20700288498 /* SDCloudUserDefaults.podspec */,
 				C480294E169093EF0061EFF8 /* SDCloudUserDefaults */,
 				C480298016909FFF0061EFF8 /* TestSDCloudUserDefaults */,
 				C480294B169093EF0061EFF8 /* Frameworks */,
@@ -420,6 +426,7 @@
 				C480299916909FFF0061EFF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

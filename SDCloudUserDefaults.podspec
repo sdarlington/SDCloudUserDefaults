@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SDCloudUserDefaults"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "Store NSUserDefaults and iCloud data at the same time."
 
   s.description  = <<-DESC
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.author             = "Stephen Darlington"
   s.social_media_url = "http://twitter.com/sdarlington"
   s.platforms     =  { :ios => '6.0', :osx => '10.10' }
-  s.source       = { :git => "https://github.com/sdarlington/SDCloudUserDefaults.git", :tag => "1.0.1" }
+  s.source       = { :git => "https://github.com/sdarlington/SDCloudUserDefaults.git", :tag => s.version }
   s.source_files  = 'SDCloudUserDefaults/SDCloudUserDefaults.{h,m}'
   s.public_header_files = 'SDCloudUserDefaults/SDCloudUserDefaults.h'
   s.requires_arc  = false

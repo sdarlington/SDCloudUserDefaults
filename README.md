@@ -33,6 +33,16 @@ pod 'SDCloudUserDefaults'
 
 There is no step two.
 
+## Carthage
+
+Add the following line to your Cartfile:
+
+```ruby
+github "sdarlington/SDCloudUserDefaults"
+```
+And follow the steps [here](https://github.com/Carthage/Carthage) to add the compiled framework tot your project
+
+
 ## Library as a dependency
 
 If you're using iOS 5 or above and are happy with ARC, it's as simple as:

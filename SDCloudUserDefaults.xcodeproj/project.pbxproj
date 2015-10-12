@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23BB079A1BCA5F2C004DD41D /* SDCloudUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = C4802953169093EF0061EFF8 /* SDCloudUserDefaults.m */; };
+		23BB079B1BCA5F31004DD41D /* SDCloudUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = C4802953169093EF0061EFF8 /* SDCloudUserDefaults.m */; };
+		23BB079C1BCA5F39004DD41D /* SDCloudUserDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = C4802951169093EF0061EFF8 /* SDCloudUserDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23BB079D1BCA5F41004DD41D /* SDCloudUserDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = C4802951169093EF0061EFF8 /* SDCloudUserDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C480294D169093EF0061EFF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C480294C169093EF0061EFF8 /* Foundation.framework */; };
 		C4802952169093EF0061EFF8 /* SDCloudUserDefaults.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4802951169093EF0061EFF8 /* SDCloudUserDefaults.h */; };
 		C4802954169093EF0061EFF8 /* SDCloudUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = C4802953169093EF0061EFF8 /* SDCloudUserDefaults.m */; };
@@ -48,6 +52,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		23BB07851BCA5E8A004DD41D /* SDCloudUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDCloudUserDefaults.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23BB07921BCA5EA2004DD41D /* SDCloudUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDCloudUserDefaults.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4802949169093EF0061EFF8 /* libSDCloudUserDefaults.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSDCloudUserDefaults.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C480294C169093EF0061EFF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4802950169093EF0061EFF8 /* SDCloudUserDefaults-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDCloudUserDefaults-Prefix.pch"; sourceTree = "<group>"; };
@@ -74,6 +80,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		23BB07811BCA5E8A004DD41D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23BB078E1BCA5EA2004DD41D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4802946169093EF0061EFF8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -114,6 +134,8 @@
 			children = (
 				C4802949169093EF0061EFF8 /* libSDCloudUserDefaults.a */,
 				C480297916909FFF0061EFF8 /* TestSDCloudUserDefaults.app */,
+				23BB07851BCA5E8A004DD41D /* SDCloudUserDefaults.framework */,
+				23BB07921BCA5EA2004DD41D /* SDCloudUserDefaults.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,7 +197,62 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		23BB07821BCA5E8A004DD41D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23BB079D1BCA5F41004DD41D /* SDCloudUserDefaults.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23BB078F1BCA5EA2004DD41D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23BB079C1BCA5F39004DD41D /* SDCloudUserDefaults.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		23BB07841BCA5E8A004DD41D /* SDCloudUserDefaults iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23BB078C1BCA5E8A004DD41D /* Build configuration list for PBXNativeTarget "SDCloudUserDefaults iOS" */;
+			buildPhases = (
+				23BB07801BCA5E8A004DD41D /* Sources */,
+				23BB07811BCA5E8A004DD41D /* Frameworks */,
+				23BB07821BCA5E8A004DD41D /* Headers */,
+				23BB07831BCA5E8A004DD41D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SDCloudUserDefaults iOS";
+			productName = "SDCloudUserDefaults iOS";
+			productReference = 23BB07851BCA5E8A004DD41D /* SDCloudUserDefaults.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		23BB07911BCA5EA2004DD41D /* SDCloudUserDefaults OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23BB07971BCA5EA2004DD41D /* Build configuration list for PBXNativeTarget "SDCloudUserDefaults OSX" */;
+			buildPhases = (
+				23BB078D1BCA5EA2004DD41D /* Sources */,
+				23BB078E1BCA5EA2004DD41D /* Frameworks */,
+				23BB078F1BCA5EA2004DD41D /* Headers */,
+				23BB07901BCA5EA2004DD41D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SDCloudUserDefaults OSX";
+			productName = "SDCloudUserDefaults OSX";
+			productReference = 23BB07921BCA5EA2004DD41D /* SDCloudUserDefaults.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		C4802948169093EF0061EFF8 /* SDCloudUserDefaults */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4802957169093EF0061EFF8 /* Build configuration list for PBXNativeTarget "SDCloudUserDefaults" */;
@@ -219,6 +296,14 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Wandle Software Limited";
+				TargetAttributes = {
+					23BB07841BCA5E8A004DD41D = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					23BB07911BCA5EA2004DD41D = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
 			};
 			buildConfigurationList = C4802943169093EF0061EFF8 /* Build configuration list for PBXProject "SDCloudUserDefaults" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -234,11 +319,27 @@
 			targets = (
 				C4802948169093EF0061EFF8 /* SDCloudUserDefaults */,
 				C480297816909FFF0061EFF8 /* TestSDCloudUserDefaults */,
+				23BB07841BCA5E8A004DD41D /* SDCloudUserDefaults iOS */,
+				23BB07911BCA5EA2004DD41D /* SDCloudUserDefaults OSX */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		23BB07831BCA5E8A004DD41D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23BB07901BCA5EA2004DD41D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C480297716909FFF0061EFF8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,6 +355,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		23BB07801BCA5E8A004DD41D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23BB079A1BCA5F2C004DD41D /* SDCloudUserDefaults.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23BB078D1BCA5EA2004DD41D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23BB079B1BCA5F31004DD41D /* SDCloudUserDefaults.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4802945169093EF0061EFF8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -302,6 +419,170 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		23BB078A1BCA5E8A004DD41D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wandlesoftware.SDCloudUserDefaults-iOS";
+				PRODUCT_NAME = SDCloudUserDefaults;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		23BB078B1BCA5E8A004DD41D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wandlesoftware.SDCloudUserDefaults-iOS";
+				PRODUCT_NAME = SDCloudUserDefaults;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		23BB07981BCA5EA2004DD41D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wandlesoftware.SDCloudUserDefaults-OSX";
+				PRODUCT_NAME = SDCloudUserDefaults;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		23BB07991BCA5EA2004DD41D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wandlesoftware.SDCloudUserDefaults-OSX";
+				PRODUCT_NAME = SDCloudUserDefaults;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		C4802955169093EF0061EFF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -401,6 +682,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		23BB078C1BCA5E8A004DD41D /* Build configuration list for PBXNativeTarget "SDCloudUserDefaults iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23BB078A1BCA5E8A004DD41D /* Debug */,
+				23BB078B1BCA5E8A004DD41D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		23BB07971BCA5EA2004DD41D /* Build configuration list for PBXNativeTarget "SDCloudUserDefaults OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23BB07981BCA5EA2004DD41D /* Debug */,
+				23BB07991BCA5EA2004DD41D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C4802943169093EF0061EFF8 /* Build configuration list for PBXProject "SDCloudUserDefaults" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

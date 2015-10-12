@@ -17,9 +17,10 @@ Patches are welcomed if changes are required.
 
 # Adding to your project
 
-There are three ways of adding `SDCloudUserDefaults` to your project:
+There are four ways of adding `SDCloudUserDefaults` to your project:
 
 * [CocoaPods](http://cocoapods.org)
+* [Carthage](https://github.com/Carthage/Carthage)
 * Adding the library to your project as a dependency
 * Drag-and-drop a few files manually
 

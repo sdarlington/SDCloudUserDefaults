@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "23BB07911BCA5EA2004DD41D"
-               BuildableName = "SDCloudUserDefaults OSX.framework"
+               BuildableName = "SDCloudUserDefaults.framework"
                BlueprintName = "SDCloudUserDefaults OSX"
                ReferencedContainer = "container:SDCloudUserDefaults.xcodeproj">
             </BuildableReference>
@@ -29,8 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -46,13 +44,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "23BB07911BCA5EA2004DD41D"
-            BuildableName = "SDCloudUserDefaults OSX.framework"
+            BuildableName = "SDCloudUserDefaults.framework"
             BlueprintName = "SDCloudUserDefaults OSX"
             ReferencedContainer = "container:SDCloudUserDefaults.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -64,7 +60,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "23BB07911BCA5EA2004DD41D"
-            BuildableName = "SDCloudUserDefaults OSX.framework"
+            BuildableName = "SDCloudUserDefaults.framework"
             BlueprintName = "SDCloudUserDefaults OSX"
             ReferencedContainer = "container:SDCloudUserDefaults.xcodeproj">
          </BuildableReference>

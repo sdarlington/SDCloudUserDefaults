@@ -134,6 +134,20 @@
  */
 +(void)removeNotifications;
 
+#define ICLOUD_DATA_ENABLED_KEY @"iCloudDataEnabled"
+
+/**
+ *  Enables or disables the storage of player information and other settings in iCloud.  For Shared iPad usage
+ *  this needs to be enabled so that the users data is preserved in iCloud when the iPad is swapped to another
+ *  user.
+ */
++ (void) setiCloudEnabled:(BOOL)iCloudEnabled;
+
+/**
+ *  Returns YES if iCloud is enabled.
+ */
++ (BOOL) isiCloudEnabled;
+
 /**
  *  Notification with the following name will be fired for every updated value that came from iCloud
  */
